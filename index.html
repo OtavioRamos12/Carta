@@ -1,59 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eu te amo</title>
-    <link rel="stylesheet" href="index.css">
-    
+  <meta charset="UTF-8">
+  <title>Área Restrita</title>
+  <style>
+body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe6e6;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      background-color: #ff6699;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e60073;
+    }
+  </style>
 </head>
-<script>
-    const texto =
-  `Oii amor, Tudo bem?
+<body>
+  <h1>🌸 Cartinha com Amor 🌸</h1>
+  <input type="password" id="senha" placeholder="Senha">
+  <button onclick="verificarSenha()">Entrar</button>
+  <p id="mensagem"></p>
 
-Separei um tempo do meu dia só pra fazer esse site pra vc. É como se fosse uma cartinha, só que um pouco demorado de fazer e mais díficil.
-
-Eu quero que vc saiba o quanto eu amo e como é especial pra mim ter vc ao meu lado. Vc me faz bem de um jeito que nem dá pra explicar... só de ver o seu sorriso, o seu olhar, tudo em vc é maravilhoso.
-
-Mesmo quando você não está fisicamente aqui, vc me faz sorri e me faz bem.
-
-Eu realmente quero viver a vida inteira com você. O tempo passa tão rápido que jaja estamos casando ksks, com nossa casinha, nossos pets e filhos hihi 🥰
-
-Eu quero que vc saiba que pode contar comigo pra tudo, pra qualquer coisa eu estarei sempre ao seu lado.
-
-Eu te amo muito, Isabella ❤️`;
-  
-    let i = 0;
-    const velocidade = 25; // velocidade da "máquina de escrever"
-    function digitarTexto() {
-      if (i < texto.length) {
-        document.getElementById("texto-romantico").innerHTML += texto.charAt(i);
-        i++;
-        setTimeout(digitarTexto, velocidade);
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+      
+      if (senha === "30/06") {  // <- Coloque aqui a senha correta
+        window.location.href = "site.html"; // <- Altere para o nome da SUA página
+      } else {
+        document.getElementById("mensagem").textContent = "Senha incorreta!";
       }
     }
-    window.onload = digitarTexto;
   </script>
-  
-<body>
-    <header>
-        <div class="imagem-centralizada">
-            <img src="./imagens/eu e o mor.jpg" alt="Imagem da esquerda">
-            
-            <div class="decoracao">
-              <p class="emojis">💖 🌹 💖</p>
-              <img src="./imagens/pixel arte.jpg" alt="Imagem central" class="imagem-central">
-              <p class="emojis">🌹 💖 🌹</p>
-            </div>
-            
-            <img src="./imagens/chico brito.jpg" alt="Imagem da direita">
-          </div>
-          
-      </header>
-    <nav>
-      <div class="mensagem-romantica">
-        <p id="texto-romantico"></p>
-      </div>
-    </nav>
 </body>
 </html>
