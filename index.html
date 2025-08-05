@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Área restrita</title>
+  <meta charset="UTF-8">
+  <title>Área Restrita</title>
   <style>
-    body {
+body {
       font-family: Arial, sans-serif;
       background-color: #ffe6e6;
       text-align: center;
@@ -36,19 +36,18 @@
 </head>
 <body>
   <h1>🌸 Cartinha com Amor 🌸</h1>
-  <p>Digite a senha para acessar:</p>
-  <input type="password" id="senha" placeholder="Senha" />
+  <input type="password" id="senha" placeholder="Senha">
   <button onclick="verificarSenha()">Entrar</button>
+  <p id="mensagem"></p>
 
   <script>
     function verificarSenha() {
-      const senhaCorreta = "30/06"; // <-- mude aqui se quiser outra senha
-      const senhaDigitada = document.getElementById("senha").value;
-
-      if (senhaDigitada === senhaCorreta) {
-        window.location.href = "index.html"; // <- seu site principal
+      const senha = document.getElementById("senha").value;
+      
+      if (senha === "30/06") {  // <- Coloque aqui a senha correta
+        window.location.href = "site.html"; // <- Altere para o nome da SUA página
       } else {
-        alert("❌ Senha incorreta!");
+        document.getElementById("mensagem").textContent = "Senha incorreta!";
       }
     }
   </script>
