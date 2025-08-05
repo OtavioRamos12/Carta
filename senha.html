@@ -3,22 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <title>Área restrita</title>
-  <link rel="stylesheet" href="index.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe6e6;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      background-color: #ff6699;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e60073;
+    }
+  </style>
 </head>
 <body>
-  <h1>Digite a senha para entrar</h1>
+  <h1>🌸 Cartinha com Amor 🌸</h1>
+  <p>Digite a senha para acessar:</p>
   <input type="password" id="senha" placeholder="Senha" />
   <button onclick="verificarSenha()">Entrar</button>
 
   <script>
     function verificarSenha() {
-      const senhaCorreta = "30/06"; // <- senha definida
+      const senhaCorreta = "30/06"; // <-- mude aqui se quiser outra senha
       const senhaDigitada = document.getElementById("senha").value;
 
       if (senhaDigitada === senhaCorreta) {
-        window.location.href = "index.html"; // <- Página principal
+        window.location.href = "index.html"; // <- seu site principal
       } else {
-        alert("Senha incorreta!");
+        alert("❌ Senha incorreta!");
       }
     }
   </script>
