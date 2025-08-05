@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Área restrita</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <h1>Digite a senha para entrar</h1>
+  <input type="password" id="senha" placeholder="Senha" />
+  <button onclick="verificarSenha()">Entrar</button>
+
+  <script>
+    function verificarSenha() {
+      const senhaCorreta = "30/06"; // <- senha definida
+      const senhaDigitada = document.getElementById("senha").value;
+
+      if (senhaDigitada === senhaCorreta) {
+        window.location.href = "index.html"; // <- Página principal
+      } else {
+        alert("Senha incorreta!");
+      }
+    }
+  </script>
+</body>
+</html>
